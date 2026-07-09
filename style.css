@@ -5,13 +5,11 @@
 }
 img {
   max-width: 100%;
-  height: auto;
-  vertical-align: middle;
+  height: 100%;
 }
 html {
   scroll-behavior: smooth;
 }
-
 .container {
   max-width: 1440px;
   margin: 0 auto;
@@ -19,9 +17,6 @@ html {
   position: relative;
   width: 100%;
   border: 2px solid black;
-}
-.hr {
-  margin-top: 30px;
 }
 .nav {
   padding: 10px 0;
@@ -51,15 +46,18 @@ html {
   font-size: 20px;
   margin-left: 10px;
 }
+.menu_icon {
+  display: none;
+}
 
 .about {
   display: flex;
   width: 100%;
 }
-.about_us{
+.about_us {
   width: 48%;
 }
-.img1{
+.img1 {
   width: 50%;
 }
 .about_us h3 {
@@ -73,6 +71,7 @@ html {
   width: 532px;
   font-size: 24px;
   margin-bottom: 61px;
+  color: #8f95a5;
 }
 .about_us button {
   font-size: 36px;
@@ -84,154 +83,114 @@ html {
   border-radius: 15px;
 }
 
-/*...skills....*/
-
 .skils {
   margin: 103px 0 92px 0;
   font-size: 48px;
   text-align: center;
 }
 
+/*...skills....*/
+
+/* Umumiy grid konteyneri */
+/* Umumiy grid konteyneri */
 .all_grid {
   display: flex;
-}
-.skils_grid {
-  display: grid;
-  grid-template-columns: repeat(2, 434px);
-}
-.speaking_grid {
-  margin-right: 18px;
-  background: #f5f5f5;
-}
-.speaking_grid h3 {
-  font-size: 30px;
-  margin-left: 40px;
-  margin-bottom: 5px;
-  font-family: Poppins;
-  font-weight: 600;
-  font-style: SemiBold;
-  line-height: 80px;
-  letter-spacing: 0%;
-}
-.speaking_grid p {
-  margin-left: 40px;
-  margin-right: 40px;
-  font-family: Poppins;
-  font-weight: 400;
-  font-style: Regular;
-  font-size: 16px;
-  line-height: 100%;
-  letter-spacing: 0%;
-  margin-bottom: 36px;
-  color: #8f95a5;
-}
-.speaking_grid button {
-  font-size: 18px;
-  padding: 17px 63px;
-  background: #263238;
-  color: #ffffff;
-  border-radius: 5px;
-  margin-left: 40px;
-  margin-bottom: 92px;
+  gap: 18px;
+  width: 100%;
+  max-width: 1200px; /* Maksimal kenglik */
+  margin: 0 auto;
 }
 
-.writing {
-  margin-right: 18px;
-  margin-bottom: 18px;
+/* Chap tomondagi Speaking bloki */
+.speaking_grid {
+  flex: 1;
   background: #f5f5f5;
+  display: flex;
+  flex-direction: column;
 }
-.writing img {
-  margin-left: 140px;
-  width: 200px;
+
+/* O'ng tomondagi elementlar uchun grid (Writing, Reading, Listening) */
+.skils_grid {
+  flex: 2;
+  display: grid;
+  grid-template-columns: repeat(
+    2,
+    1fr
+  ); /* Ekran kichrayganda o'zi moslashadi */
+  gap: 18px;
 }
+
+/* Rasmlar divdan chiqib ketmasligi uchun majburiy qoida */
+.img2 img,
+.img3 img,
+.img4 img,
+.img5 img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Ichki matnlar va elementlar */
+.speaking_grid h3,
 .writing h3,
-.reading h3 {
+.reading h3,
+.listening h3 {
   font-size: 30px;
-  margin-left: 50px;
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-weight: 600;
-  font-style: SemiBold;
-  line-height: 80px;
-  letter-spacing: 0%;
-  width: max-content;
+  line-height: 1.5;
+  margin: 20px 40px 10px 40px;
 }
+
+.speaking_grid p,
 .writing p,
-.reading p {
+.reading p,
+.listening p {
   font-size: 16px;
-  margin-left: 40px;
-  margin-right: 40px;
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-weight: 400;
-  font-style: Regular;
-  line-height: 100%;
-  letter-spacing: 0%;
+  line-height: 1.4;
   color: #8f95a5;
-  margin-bottom: 33px;
+  margin: 0 40px 25px 40px;
 }
-.writing button,
-.reading button {
+
+/* Tugmalar */
+.all_grid button {
   font-size: 18px;
-  padding: 17px 63px;
+  padding: 15px 40px;
   background: #263238;
   color: #ffffff;
+  border: none;
   border-radius: 5px;
   margin-left: 40px;
   margin-bottom: 30px;
+  cursor: pointer;
+  width: fit-content;
 }
 
+.writing,
 .reading {
-  margin-bottom: 18px;
   background: #f5f5f5;
+  width: 100%;
 }
-.reading img {
-  width: 300px;
-}
+
+/* Listening bloki - o'ng tomonda 2 ta ustunni to'liq egallaydi */
 .listening {
-  width: 870px;
+  grid-column: span 2;
   display: flex;
   background: #f5f5f5;
-}
-.listening img {
-  width: 382px;
-  height: 255px;
-}
-.listening h3 {
-  margin-top: 48px;
-  margin-left: 40px;
-  font-size: 30px;
-  font-family: Poppins;
-  font-weight: 600;
-  font-style: SemiBold;
-  line-height: 80px;
-  letter-spacing: 0%;
-}
-.listening p {
-  font-size: 16px;
-  font-family: Poppins;
-  font-weight: 400;
-  font-style: Regular;
-  line-height: 100%;
-  letter-spacing: 0%;
-  margin-left: 40px;
-  width: 400px;
-  color: #8f95a5;
-}
-.listening button {
-  font-size: 18px;
-  padding: 17px 63px;
-  background: #263238;
-  color: #ffffff;
-  border-radius: 5px;
-  font-family: Poppins;
-  font-weight: 500;
-  font-style: Medium;
-  line-height: 100%;
-  letter-spacing: 0%;
-  margin-left: 40px;
-  margin-bottom: 68px;
-  margin-top: 25px;
+  align-items: center;
 }
 
+.listening_left {
+  flex: 1;
+}
+
+.listening_right {
+  flex: 1;
+}
+
+/*......frame.....*/
 .frame {
   display: flex;
   margin-top: 200px;
@@ -349,7 +308,7 @@ html {
 
 .contact {
   display: flex;
-  margin-top: 261px;
+  margin-top: 200px;
 }
 
 .contact1 h3 {
@@ -371,6 +330,9 @@ html {
   letter-spacing: 0%;
   color: #8f95a5;
   margin-bottom: 52px;
+}
+.btn {
+  display: flex;
 }
 .btn input {
   width: 450px;
@@ -402,6 +364,7 @@ html {
 .footer {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-top: 30px;
   margin-bottom: 30px;
 }
@@ -413,7 +376,7 @@ html {
   line-height: 100%;
   letter-spacing: 0%;
 }
-.footer a {
+.footer_a a {
   color: #8f95a5;
   text-decoration: transparent;
   font-family: Poppins;
@@ -422,4 +385,671 @@ html {
   font-size: 24px;
   line-height: 100%;
   letter-spacing: 0%;
+  margin-left: 10px;
+}
+.hr {
+  margin-top: 20px;
+}
+
+@media (max-width: 1280px) {
+  .container {
+    padding: 0 40px;
+  }
+  .about {
+    display: flex;
+    width: 100%;
+  }
+  .about_us {
+    width: 48%;
+  }
+  .img1 {
+    width: 50%;
+  }
+  .about_us h3 {
+    margin-top: 90px;
+    font-size: 64px;
+    width: 386px;
+    margin-bottom: 44px;
+  }
+
+  .about_us p {
+    width: 532px;
+    font-size: 24px;
+    margin-bottom: 61px;
+    color: #8f95a5;
+  }
+  .about_us button {
+    font-size: 36px;
+    padding: 32px 117px;
+    background-color: none;
+    border: none;
+    color: white;
+    background-color: black;
+    border-radius: 15px;
+  }
+  .contact {
+    display: flex;
+    margin-top: 261px;
+  }
+
+  .contact1 h3 {
+    font-family: Poppins;
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 48px;
+    line-height: 80px;
+    letter-spacing: 0%;
+    margin-top: 30px;
+    margin-bottom: 37px;
+  }
+  .contact p {
+    font-family: Poppins;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #8f95a5;
+    margin-bottom: 52px;
+  }
+  .btn input {
+    width: 340px;
+    font-family: Poppins;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    padding: 22px 0 22px 33px;
+    border-radius: 10px;
+    border: transparent;
+    border: 2px solid black;
+  }
+  .btn button {
+    width: 160px;
+    padding: 22px 50px;
+    font-family: Poppins;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    background: #263238;
+    color: white;
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .talk {
+    padding: 15px 50px 15px 50px;
+    font-size: 20px;
+    background-color: transparent;
+    border-radius: 5px;
+  }
+  .about {
+    display: flex;
+    width: 100%;
+  }
+  .about_us {
+    width: 48%;
+  }
+  .img1 {
+    width: 50%;
+  }
+  .about_us h3 {
+    margin-top: 90px;
+    font-size: 55px;
+    width: 386px;
+    margin-bottom: 27px;
+  }
+
+  .about_us p {
+    width: 532px;
+    font-size: 20px;
+    margin-bottom: 33px;
+    color: #8f95a5;
+  }
+  .about_us button {
+    font-size: 24px;
+    padding: 22px 78px;
+    background-color: none;
+    border: none;
+    color: white;
+    background-color: black;
+    border-radius: 15px;
+  }
+  .frame {
+    display: flex;
+    margin-top: 200px;
+    justify-content: space-between;
+  }
+  .frame_us {
+    width: 635px;
+  }
+  .frame_us h3 {
+    margin-top: 100px;
+    font-family: Poppins;
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 44px;
+    line-height: 80px;
+    letter-spacing: 0%;
+    margin-bottom: 23px;
+  }
+  .frame_us p {
+    font-family: Poppins;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 15px;
+    line-height: 130%;
+    letter-spacing: 0%;
+    color: #8f95a5;
+    margin-bottom: 30px;
+  }
+  .frame img {
+    width: 500px;
+    height: 500px;
+  }
+  .about_num {
+    display: flex;
+    gap: 80px;
+    text-align: center;
+  }
+  .about_num1 h4 {
+    font-size: 40px;
+  }
+  .about_num1 p {
+    font-size: 20px;
+    color: #8f95a5;
+  }
+  .contact {
+    display: flex;
+    margin-top: 150px;
+  }
+}
+
+@media (max-width: 900px) {
+  .container {
+    padding: 0 40px;
+  }
+  .nav {
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    width: 100%;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin-top: 20px;
+    background-color: #fff;
+  }
+  .nav h2 {
+    font-size: 30px;
+  }
+  .nav a {
+    text-decoration: transparent;
+    color: black;
+    font-size: 16px;
+    margin-left: 10px;
+  }
+  .talk {
+    padding: 12px 40px 12px 40px;
+    font-size: 18px;
+    background-color: transparent;
+    border-radius: 5px;
+  }
+}
+@media (max-width: 850px) {
+  .about {
+    display: flex;
+    width: 100%;
+  }
+  .about_us {
+    width: 48%;
+  }
+  .img1 {
+    width: 50%;
+  }
+  .about_us h3 {
+    margin-top: px;
+    font-size: 55px;
+    margin-bottom: 20px;
+  }
+
+  .about_us p {
+    width: 532px;
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #8f95a5;
+  }
+  .about_us button {
+    font-size: 22px;
+    padding: 15px 70px;
+    background-color: none;
+    border: none;
+    color: white;
+    background-color: black;
+    border-radius: 15px;
+  }
+}
+@media (max-width: 767px) {
+  .about {
+    flex-direction: column-reverse;
+    text-align: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+  .about_us {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .about_us button {
+    font-size: 20px;
+    padding: 12px 50px;
+    background-color: none;
+    border: none;
+    color: white;
+    background-color: black;
+    border-radius: 15px;
+  }
+  .skils {
+    margin: 60px 0 40px 0;
+    font-size: 48px;
+    text-align: center;
+  }
+  .img1 {
+    width: 90%;
+  }
+  .main {
+    display: none;
+  }
+  .talk {
+    display: none;
+  }
+  .menu_icon {
+    display: block;
+  }
+  .all_grid {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    width: 100%;
+    max-width: 1200px; /* Maksimal kenglik */
+    margin: 0 auto;
+    align-items: center;
+    text-align: center;
+    padding: 70px;
+  }
+
+  /* Chap tomondagi Speaking bloki */
+  .speaking_grid {
+    flex: 1;
+    background: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  /* O'ng tomondagi elementlar uchun grid (Writing, Reading, Listening) */
+  .skils_grid {
+    flex: 2;
+    display: contents;
+    gap: 18px;
+  }
+
+  /* Rasmlar divdan chiqib ketmasligi uchun majburiy qoida */
+  .img2 img,
+  .img3 img,
+  .img4 img,
+  .img5 img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .listening {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .speaking_grid {
+    margin: 0 auto;
+    align-items: center;
+  }
+  /* Ichki matnlar va elementlar */
+  .speaking_grid h3,
+  .writing h3,
+  .reading h3,
+  .listening h3 {
+    font-size: 30px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    line-height: 1.5;
+    margin: 20px 40px 10px 40px;
+  }
+
+  .speaking_grid p,
+  .writing p,
+  .reading p,
+  .listening p {
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    line-height: 1.4;
+    color: #8f95a5;
+    margin: 0 40px 25px 40px;
+  }
+
+  /* Tugmalar */
+  .all_grid button {
+    font-size: 18px;
+    padding: 15px 40px;
+    background: #263238;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    margin-left: 40px;
+    margin-bottom: 30px;
+    cursor: pointer;
+    width: fit-content;
+  }
+
+  .writing,
+  .reading {
+    background: #f5f5f5;
+    width: 100%;
+  }
+
+  /* Listening bloki - o'ng tomonda 2 ta ustunni to'liq egallaydi */
+  .listening {
+    grid-column: span 2;
+    display: flex;
+    background: #f5f5f5;
+    align-items: center;
+  }
+
+  .listening_left {
+    flex: 1;
+  }
+
+  .listening_right {
+    flex: 1;
+  }
+  .frame {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+    margin-top: 50px;
+    margin: 0 auto;
+  }
+
+  .frame_us h3 {
+    margin-top: 100px;
+    font-family: Poppins;
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 48px;
+    line-height: 80px;
+    letter-spacing: 0%;
+    margin-bottom: 23px;
+  }
+  .frame_us p {
+    font-family: Poppins;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 20px;
+    line-height: 130%;
+    letter-spacing: 0%;
+    color: #8f95a5;
+    margin-bottom: 30px;
+  }
+  .frame img {
+    width: 500px;
+    height: 500px;
+  }
+  .about_num {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+  }
+  .about_num1 h4 {
+    font-size: 40px;
+  }
+  .about_num1 p {
+    font-size: 20px;
+    color: #8f95a5;
+    text-align: center ; !important
+    margin-bottom: 20px
+    ;
+  }
+  .pricing {
+    text-align: center;
+    font-family: Poppins;
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 48px;
+    line-height: 80px;
+    letter-spacing: 0%;
+    margin-top: 129px;
+    margin-bottom: 4%;
+  }
+
+  .pricing_flex {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 auto;
+    gap: 20px;
+  }
+  .content1,
+  .content2,
+  .content3 {
+    width: 100%;
+  }
+  .content2 {
+    margin-top: 40px;
+  }
+  .content1 h3,
+  .content2 h3,
+  .content3 h3 {
+    font-family: Poppins;
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 30px;
+    line-height: 48px;
+    letter-spacing: 0%;
+    margin-bottom: 20px;
+  }
+  .content1 h3 {
+    margin-top: 25px;
+  }
+  .content2 h3 {
+    margin-top: 20px;
+  }
+  .content1 p,
+  .content2 p,
+  .content3 p {
+    font-family: Poppins;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #8f95a5;
+    margin-bottom: 30px;
+  }
+
+  .content1 button,
+  .content2 button,
+  .content3 button {
+    background: #eeeeee;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+  }
+
+  .content2 button {
+    margin-top: 15px;
+  }
+  .content3 button {
+    margin-top: 15px;
+  }
+
+  .contact {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 100px;
+  }
+
+  .contact1 h3 {
+    font-family: Poppins;
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 48px;
+    line-height: 80px;
+    letter-spacing: 0%;
+    margin-top: 30px;
+    margin-bottom: 37px;
+  }
+  .contact p {
+    font-family: Poppins;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #8f95a5;
+    margin-bottom: 52px;
+  }
+  .btn {
+    gap: 10px;
+  }
+  .btn input {
+    font-family: Poppins;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    padding: 15px 0 15px 33px;
+    border-radius: 10px;
+    border: transparent;
+    border: 2px solid black;
+  }
+  .btn button {
+    padding: 15px 0px;
+    font-family: Poppins;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    background: #263238;
+    color: white;
+    border-radius: 10px;
+  }
+  .footer h3 {
+    font-size: 24px;
+  }
+  .footer a {
+    font-size: 18px;
+  }
+}
+@media (max-width: 650px) {
+  .container{
+    padding: 0 20px;
+  }
+  .frame {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    margin-top: 50px;
+  }
+  .frame_us {
+    width: max-content;
+  }
+  .frame_us h3 {
+    margin-top: 100px;
+    font-family: Poppins;
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 40px;
+    line-height: 80px;
+    letter-spacing: 0%;
+    margin-bottom: 23px;
+  }
+  .frame_us p {
+    width: max-content !important; 
+    font-family: Poppins;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 16px;
+    letter-spacing: 0%;
+    color: #8f95a5;
+    margin-bottom: 30px;
+    height: auto;
+  }
+  .frame img {
+    width: 100%;
+    height: auto;
+  }
+  .about_num {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  .about_num1 h4 {
+    font-size: 24px;
+  }
+  .about_num1 p {
+    font-size: 13px;
+  }
+
+  .about_us p {
+    width: max-content;
+  }
+  .footer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 500px) {
+  .about h3{
+    font-size: 40px;
+    width: max-content;
+  }
+  .all_grid {
+    padding: 30px;
+  }
+  .about_us p {
+  }
+  .frame_us p{
+    font-size: 13px;
+  }
+  .footer h3 {
+    font-size: 20px;
+  }
+  .footer_a a{
+    font-size: 16px;
+  } 
+  .btn{
+    width: max-content;
+    flex-direction: column;
+    align-items: center;
+  }
+  .btn input{
+    padding: 16px 26px;
+    width: 260px;
+  }
+  .about_num {
+    gap: 20px;
+  }
 }

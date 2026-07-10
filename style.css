@@ -1052,4 +1052,43 @@ html {
   .about_num {
     gap: 20px;
   }
+  .speaking_grid p , .reading p , .listening p , .writing p{
+    font-size: 13px;
+   }
+   .speaking_grid h3 , .reading h3 , .listening h3 , .writing h3{
+    font-size: 18px;
+   }
+   .speaking_grid button , .reading button , .listening button , .writing button{
+    font-size: 18px;
+    padding: 14px 40px;
+    margin: 0 auto;
+   }
+   .speaking_grid  , .reading  , .listening  , .writing {
+   padding-bottom: 20px;
+   }
+}
+@media (max-width: 330px){
+  .about p {
+    font-size: 10px; 
+   }
+   .frame_us p{
+    font-size: 8px;
+   }
+   .btn input {
+    width: 200px;
+   }
+}
+@media (max-width: 230px){
+  .btn input{
+    width: 150px;
+    font-size: 14px;
+    padding: 10px;
+  }
+  .btn button{
+    padding: 10px;
+    font-size: 14px;
+  }
+  .all_grid{
+    padding: 0;
+  }
 }

@@ -16,7 +16,6 @@ html {
   padding: 0px 120px 0 120px;
   position: relative;
   width: 100%;
-  border: 2px solid black;
 }
 .nav {
   padding: 10px 0;
@@ -141,7 +140,13 @@ html {
   line-height: 1.5;
   margin: 20px 40px 10px 40px;
 }
-
+.speaking_grid,
+.writing ,
+.reading {  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}  
 .speaking_grid p,
 .writing p,
 .reading p,
@@ -149,7 +154,7 @@ html {
   font-size: 16px;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
-  line-height: 1.4;
+  line-height: 180%;
   color: #8f95a5;
   margin: 0 40px 25px 40px;
 }
@@ -251,14 +256,20 @@ html {
 .pricing_flex {
   display: flex;
   gap: 20px;
+  justify-content: space-between;
+  width: 100%;
+}
+.pricing_flex img {
 }
 .content1,
 .content2,
 .content3 {
-  width: 400px;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .content2 {
-  margin-top: 40px;
 }
 .content1 h3,
 .content2 h3,
@@ -267,15 +278,18 @@ html {
   font-weight: 600;
   font-style: SemiBold;
   font-size: 30px;
-  line-height: 48px;
   letter-spacing: 0%;
-  margin-bottom: 20px;
+}
+.content-just {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  height: 200px;
+  justify-content: space-between;
 }
 .content1 h3 {
-  margin-top: 25px;
 }
 .content2 h3 {
-  margin-top: 20px;
 }
 .content1 p,
 .content2 p,
@@ -287,7 +301,6 @@ html {
   line-height: 100%;
   letter-spacing: 0%;
   color: #8f95a5;
-  margin-bottom: 30px;
 }
 
 .content1 button,
@@ -300,10 +313,8 @@ html {
 }
 
 .content2 button {
-  margin-top: 15px;
 }
 .content3 button {
-  margin-top: 15px;
 }
 
 .contact {
@@ -333,16 +344,16 @@ html {
 }
 .btn {
   display: flex;
+  gap: 20px;
 }
 .btn input {
-  width: 450px;
   font-family: Poppins;
   font-weight: 400;
   font-style: Regular;
   font-size: 16px;
   line-height: 100%;
   letter-spacing: 0%;
-  padding: 26px 0 26px 33px;
+  padding: 26px 200px 26px 33px;
   border-radius: 10px;
   border: transparent;
   border: 2px solid black;
@@ -673,112 +684,51 @@ html {
   .menu_icon {
     display: block;
   }
+
+  /*...skills..............*/
   .all_grid {
-    display: flex;
-    flex-direction: column;
     gap: 18px;
     width: 100%;
-    max-width: 1200px; /* Maksimal kenglik */
+    max-width: 1200px;
     margin: 0 auto;
-    align-items: center;
-    text-align: center;
-    padding: 70px;
+    padding: 20px;
   }
 
-  /* Chap tomondagi Speaking bloki */
   .speaking_grid {
-    flex: 1;
-    background: #f5f5f5;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
   }
-
-  /* O'ng tomondagi elementlar uchun grid (Writing, Reading, Listening) */
-  .skils_grid {
-    flex: 2;
-    display: contents;
-    gap: 18px;
-  }
-
-  /* Rasmlar divdan chiqib ketmasligi uchun majburiy qoida */
   .img2 img,
   .img3 img,
   .img4 img,
   .img5 img {
     width: 100%;
     height: auto;
-    display: block;
   }
 
-  .listening {
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: center;
-  }
   .speaking_grid {
-    margin: 0 auto;
-    align-items: center;
   }
-  /* Ichki matnlar va elementlar */
   .speaking_grid h3,
   .writing h3,
   .reading h3,
   .listening h3 {
-    font-size: 30px;
-    font-family: "Poppins", sans-serif;
-    font-weight: 600;
-    line-height: 1.5;
-    margin: 20px 40px 10px 40px;
+    font-size: 20px;
   }
 
   .speaking_grid p,
   .writing p,
   .reading p,
   .listening p {
-    font-size: 16px;
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    line-height: 1.4;
-    color: #8f95a5;
-    margin: 0 40px 25px 40px;
+    font-size: 13px;
+  }
+  .speaking_grid button,
+  .writing button,
+  .reading button,
+  .listening button {
+    font-size: 12px;
+    padding: 12px 30px;
   }
 
-  /* Tugmalar */
-  .all_grid button {
-    font-size: 18px;
-    padding: 15px 40px;
-    background: #263238;
-    color: #ffffff;
-    border: none;
-    border-radius: 5px;
-    margin-left: 40px;
-    margin-bottom: 30px;
-    cursor: pointer;
-    width: fit-content;
-  }
+  /*....skills end ....*/
 
-  .writing,
-  .reading {
-    background: #f5f5f5;
-    width: 100%;
-  }
-
-  /* Listening bloki - o'ng tomonda 2 ta ustunni to'liq egallaydi */
-  .listening {
-    grid-column: span 2;
-    display: flex;
-    background: #f5f5f5;
-    align-items: center;
-  }
-
-  .listening_left {
-    flex: 1;
-  }
-
-  .listening_right {
-    flex: 1;
-  }
   .frame {
     display: flex;
     flex-direction: column-reverse;
@@ -823,9 +773,8 @@ html {
   .about_num1 p {
     font-size: 20px;
     color: #8f95a5;
-    text-align: center ; !important
-    margin-bottom: 20px
-    ;
+    text-align: center;
+    margin-bottom: 20px;
   }
   .pricing {
     text-align: center;
@@ -840,8 +789,6 @@ html {
   }
 
   .pricing_flex {
-    display: flex;
-    flex-direction: column;
     text-align: center;
     margin: 0 auto;
     gap: 20px;
@@ -849,10 +796,7 @@ html {
   .content1,
   .content2,
   .content3 {
-    width: 100%;
-  }
-  .content2 {
-    margin-top: 40px;
+    width: 33%;
   }
   .content1 h3,
   .content2 h3,
@@ -860,24 +804,17 @@ html {
     font-family: Poppins;
     font-weight: 600;
     font-style: SemiBold;
-    font-size: 30px;
-    line-height: 48px;
+    font-size: 20px;
     letter-spacing: 0%;
-    margin-bottom: 20px;
   }
-  .content1 h3 {
-    margin-top: 25px;
-  }
-  .content2 h3 {
-    margin-top: 20px;
-  }
+
   .content1 p,
   .content2 p,
   .content3 p {
     font-family: Poppins;
     font-weight: 400;
     font-style: Regular;
-    font-size: 20px;
+    font-size: 14px;
     line-height: 100%;
     letter-spacing: 0%;
     color: #8f95a5;
@@ -962,8 +899,9 @@ html {
   }
 }
 @media (max-width: 650px) {
-  .container{
+  .container {
     padding: 0 20px;
+    margin: 0 auto;
   }
   .frame {
     display: flex;
@@ -985,7 +923,7 @@ html {
     margin-bottom: 23px;
   }
   .frame_us p {
-    width: max-content !important; 
+    width: max-content !important;
     font-family: Poppins;
     font-weight: 400;
     font-style: Regular;
@@ -1019,76 +957,160 @@ html {
     flex-direction: column;
     gap: 10px;
   }
+  .all_grid {
+    flex-direction: column;
+    text-align: center;
+  }
+  .speaking_grid {
+    text-align: center;
+  }
+  .skils_grid {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .listening {
+    flex-direction: column-reverse;
+  }
+  .speaking_grid button,
+  .writing button,
+  .reading button,
+  .listening button {
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
 }
 
 @media (max-width: 500px) {
-  .about h3{
-    font-size: 40px;
+  .container {
+    margin: 0 auto;
+  }
+  .about h3 {
+    font-size: 30px;
     width: max-content;
+  }
+  .about p {
+    font-size: 18px;
   }
   .all_grid {
     padding: 30px;
   }
+  .about_us {
+  }
   .about_us p {
   }
-  .frame_us p{
+  .about button {
+    font-size: 18px;
+    width: 100%;
+  }
+  .frame_us p {
     font-size: 13px;
   }
   .footer h3 {
     font-size: 20px;
   }
-  .footer_a a{
+  .footer_a a {
     font-size: 16px;
-  } 
-  .btn{
+  }
+  .btn {
     width: max-content;
     flex-direction: column;
     align-items: center;
   }
-  .btn input{
+  .btn input {
     padding: 16px 26px;
     width: 260px;
   }
   .about_num {
     gap: 20px;
   }
-  .speaking_grid p , .reading p , .listening p , .writing p{
+  .speaking_grid p,
+  .reading p,
+  .listening p,
+  .writing p {
     font-size: 13px;
-   }
-   .speaking_grid h3 , .reading h3 , .listening h3 , .writing h3{
+  }
+  .speaking_grid h3,
+  .reading h3,
+  .listening h3,
+  .writing h3 {
     font-size: 18px;
-   }
-   .speaking_grid button , .reading button , .listening button , .writing button{
+  }
+  .speaking_grid button,
+  .reading button,
+  .listening button,
+  .writing button {
     font-size: 18px;
     padding: 14px 40px;
     margin: 0 auto;
-   }
-   .speaking_grid  , .reading  , .listening  , .writing {
-   padding-bottom: 20px;
-   }
-}
-@media (max-width: 330px){
-  .about p {
-    font-size: 10px; 
-   }
-   .frame_us p{
+  }
+  .speaking_grid,
+  .reading,
+  .listening,
+  .writing {
+    padding-bottom: 20px;
+  }
+  .btn {
+    margin: 0 auto;
+  }
+  .pricing_flex {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+  .content1,
+  .content2,
+  .content3 {
+    width: 90%;
+  }
+  .content1 button,
+  .content2 button,
+  .content3 button {
+    width: 60%;
+    align-items: center;
+    margin: 0 auto;
+  }
+  .footer {
+    margin-top: 5px;
     font-size: 8px;
-   }
-   .btn input {
-    width: 200px;
-   }
+    text-align: center;
+  }
+  .footer_a {
+    margin: 0 auto;
+  }
+  .about_us button {
+    padding: 10px 30px;
+  }
 }
-@media (max-width: 230px){
-  .btn input{
+@media (max-width: 330px) {
+  .about p {
+    font-size: 10px;
+  }
+  .about_us button {
+    padding: 7px 20px;
+    font-size: 12px;
+  }
+  .frame_us p {
+    font-size: 8px;
+  }
+  .btn input {
+    width: 200px;
+  }
+}
+@media (max-width: 230px) {
+  .btn input {
     width: 150px;
     font-size: 14px;
     padding: 10px;
   }
-  .btn button{
+  .about_us button {
+    padding: 10px 30px;
+  }
+  .btn button {
     padding: 10px;
     font-size: 14px;
   }
-  .all_grid{
+  .all_grid {
     padding: 0;
   }
 }
